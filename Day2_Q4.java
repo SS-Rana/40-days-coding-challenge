@@ -6,12 +6,12 @@ public class Day2_Q4 {
         Double p= sc.nextDouble();
         System.out.print("Enter the Time in year  here: ");
         Double year= sc.nextDouble();
-        System.out.print("Enter the rate of Doubleerest here: ");
+        System.out.print("Enter the rate of Interest here: ");
         Double rate= sc.nextDouble();
 
         Double si=(p*rate*year)/100;
 
-        System.out.println("The Simple Doubleerest is "+si);
+        System.out.println("The Simple Interest is "+si);
 
         sc.close();
 

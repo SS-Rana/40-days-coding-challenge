@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Day3_Q5 {
     public static void main(String[] args) {
@@ -7,22 +7,21 @@ public class Day3_Q5 {
         double a = sc.nextDouble();
         double b = sc.nextDouble();
         double c = sc.nextDouble();
+        double root1;
+        double root2;
 
-        double discriminant = b * b - 4 * a * c;
-        double root1, root2;
+        double d=b*b-4*a*c;
+        if(d>=0){
+             root1= (-b+ Math.sqrt( d))/2*a;
+             root2= (-b- Math.sqrt(d))/2*a;
+             System.err.println("the roots of the quadratic equation are "+root1+" and " +root2);
 
-        if (discriminant > 0) {
-            root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-            root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-            System.out.println("Roots of the equation are: " + root1 + " and " + root2);
-        } 
-        else if (discriminant == 0) {
-            root1 = -b / (2 * a);
-            System.out.println("Root of the equation is: " + root1);
-        } 
-        else {
-            System.out.println("The root are imaginary");
         }
+        else {
+            System.err.println("the roots are imaginary");
+            
+        }
+
         sc.close();
     }
 }

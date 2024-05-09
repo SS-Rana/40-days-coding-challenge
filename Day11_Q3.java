@@ -18,5 +18,6 @@ public class Day11_Q3 {
         for(int i=0; i<num; i++){
             System.err.print(arr[i]+" ");
         }
+        sc.close();
     }
 }

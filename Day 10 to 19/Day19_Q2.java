@@ -1,50 +1,41 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Day19_Q2 {
 
-    public static boolean isPrime(int n) {
-      boolean result = true;
-      if(n<=1){
-        result = false;
+     public static void arrayprint(int arr[], int size){
+      for(int i=0;i<size;i++){
+          System.out.printf("%d \t",arr[i]);
       }
-      else if(n<=3){
-        result = true;
+  }
+  
+  public static int isPrime(int num) {
+      if (num <= 1) {
+          return 0;
       }
-      else{
-      for(int i=2; i<n/2; i++){
-        if(n%i == 0){
-            result = false;
-            break;
-        }
+      for (int i = 2; i * i <= num; i++) {
+          if (num % i == 0) {
+              return 0;
+          }
       }
-    }
-    return result;
-    }
-
-    public static List<Integer> extractPrimes(int[] arr) {
-        List<Integer> primes = new ArrayList<>();
-        for (int num : arr) {
-            if (isPrime(num)) {
-                primes.add(num);
-            }
-        }
-        return primes;
-    }
-
-    
-    public static void main(String[] args) {
-        int[] originalArray = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-        List<Integer> primeArray = extractPrimes(originalArray);
-
-        System.out.println("Original array:");
-        for (int num : originalArray) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
-        System.out.println("Prime numbers array:");
-        for (int num : primeArray) {
-            System.out.print(num + " ");
-        }
-    }
+      return 1;
+  }
+  
+  public static void arraycopy(int arr[]){
+      int n=arr.length;
+      int count=0;
+      int[] arr2=new int[arr.length];
+      for(int i=0;i<n;i++){
+          int check=isPrime(arr[i]);
+          if(check==1){
+              arr2[count]=arr[i];
+              count++;
+          }
+      }
+      arrayprint(arr2, count);
+  }
+  
+  public static void main(String[] args) {
+      int[] array={1,7,89,13,4,6};
+      arraycopy(array);
+  }
+  
 }

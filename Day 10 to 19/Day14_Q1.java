@@ -9,7 +9,7 @@ public class Day14_Q1 {
 
         String S2 = sc.nextLine();
         char S3[]= new char[S1.length()+1+S2.length()];
-
+        sc.close();
 
         int i , j;
         for(i=0; i<S1.length(); i++){
@@ -25,6 +25,6 @@ public class Day14_Q1 {
         System.err.println("The concatenated String is ");
         System.err.println(S4);
 
-        sc.close();
+       
     }
 }

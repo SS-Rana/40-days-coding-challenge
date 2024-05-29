@@ -1,0 +1,2 @@
+34 84
+This text file is being read by c language

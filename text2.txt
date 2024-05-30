@@ -1,0 +1,1 @@
+Testing the code to check if the text file are similar 

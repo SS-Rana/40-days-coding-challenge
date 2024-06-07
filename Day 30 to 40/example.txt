@@ -1,4 +1,2 @@
 This is the initial content.
 Writing some more lines.
-Appending new content.
-Adding more lines to the file.
